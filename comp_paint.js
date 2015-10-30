@@ -31,7 +31,7 @@ Brush.prototype.keyTyped = function(){};
 // State Variables
 
 var brushes = [];
-var currentBrush; 
+var currentBrush;
 var forecolor;
 
 
@@ -43,7 +43,7 @@ function setup() {
 	// initial state setup
 	background(255);
 	cursor(CROSS);
-	
+
 	// initialize brushes and add toolbar buttons
 	brushes.forEach( function(brush) {
 		brush.setup();
@@ -54,7 +54,7 @@ function setup() {
 		brush.button = b;
 
 		// add a function to handle button click
-		b.click( function() { 
+		b.click( function() {
 			currentBrush = brush;
 			currentBrush.activate();
 			$(this).addClass("active").siblings().removeClass("active");
